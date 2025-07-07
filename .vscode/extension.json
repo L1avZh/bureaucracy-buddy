@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "esbenp.prettier-vscode",
+    "denoland.vscode-deno", // optional for edge runtimes
+    "bradlc.vscode-tailwindcss",
+    "samuelcolvin.fastapi",
+    "bierner.lit-html" // syntax in SW files
+  ]
+}
