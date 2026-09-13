@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. Tailwind v4 reads `@theme` to generate utilities
+ * (bg-surface, text-fg, etc.) directly from these custom properties.
+ * Light values live on :root; dark values override them under
+ * `.dark` (class strategy, driven by the theme store) OR when the OS
+ * prefers dark AND the user hasn't made an explicit choice.
+ */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-brand-50: #eef6f3;
+  --color-brand-100: #d3e9e1;
+  --color-brand-200: #a8d3c3;
+  --color-brand-300: #78b8a2;
+  --color-brand-400: #4f9c84;
+  --color-brand-500: #2f6f5e;
+  --color-brand-600: #265a4c;
+  --color-brand-700: #1f483d;
+  --color-brand-800: #193a31;
+  --color-brand-900: #142f28;
+
+  --color-accent-400: #d98c3f;
+  --color-accent-500: #c46f26;
+
+  --animate-fade-in: fade-in 180ms ease-out;
+  --animate-scale-in: scale-in 140ms ease-out;
+  --animate-check-pop: check-pop 320ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.96) translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  @keyframes check-pop {
+    0% {
+      transform: scale(0.6);
+    }
+    60% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+:root {
+  color-scheme: light;
+
+  --color-bg: #f7f7f5;
+  --color-surface: #ffffff;
+  --color-surface-raised: #ffffff;
+  --color-border: #e3e1db;
+  --color-fg: #1e211f;
+  --color-fg-muted: #5a5f5a;
+  --color-fg-subtle: #83887f;
+
+  --color-primary: var(--color-brand-500);
+  --color-primary-hover: var(--color-brand-600);
+  --color-primary-fg: #ffffff;
+
+  --color-danger: #b3421f;
+  --color-danger-bg: #fbeae5;
+  --color-warning: #92620b;
+  --color-warning-bg: #fbf0dc;
+  --color-success: #256b45;
+  --color-success-bg: #e6f2ea;
+  --color-info: #2c5c8a;
+  --color-info-bg: #e7f0fa;
+
+  --color-badge-brand-bg: var(--color-brand-50);
+  --color-badge-brand-fg: var(--color-brand-700);
+
+  --shadow-color: 220 20% 10%;
+  --ring-color: var(--color-brand-500);
+}
+
+.dark {
+  color-scheme: dark;
+
+  --color-bg: #14161a;
+  --color-surface: #1c1f24;
+  --color-surface-raised: #23262c;
+  --color-border: #33373f;
+  --color-fg: #eef0ee;
+  --color-fg-muted: #a7ada9;
+  --color-fg-subtle: #7c827c;
+
+  --color-primary: var(--color-brand-300);
+  --color-primary-hover: var(--color-brand-200);
+  --color-primary-fg: #10231d;
+
+  --color-danger: #e18a6c;
+  --color-danger-bg: #3a241d;
+  --color-warning: #e0b662;
+  --color-warning-bg: #3a2f18;
+  --color-success: #7fcaa0;
+  --color-success-bg: #1c332a;
+  --color-info: #8bb8e8;
+  --color-info-bg: #1c2b3d;
+
+  --color-badge-brand-bg: var(--color-brand-800);
+  --color-badge-brand-fg: var(--color-brand-100);
+
+  --ring-color: var(--color-brand-300);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light):not(.dark) {
+    color-scheme: dark;
+
+    --color-bg: #14161a;
+    --color-surface: #1c1f24;
+    --color-surface-raised: #23262c;
+    --color-border: #33373f;
+    --color-fg: #eef0ee;
+    --color-fg-muted: #a7ada9;
+    --color-fg-subtle: #7c827c;
+
+    --color-primary: var(--color-brand-300);
+    --color-primary-hover: var(--color-brand-200);
+    --color-primary-fg: #10231d;
+
+    --color-danger: #e18a6c;
+    --color-danger-bg: #3a241d;
+    --color-warning: #e0b662;
+    --color-warning-bg: #3a2f18;
+    --color-success: #7fcaa0;
+    --color-success-bg: #1c332a;
+    --color-info: #8bb8e8;
+    --color-info-bg: #1c2b3d;
+
+    --color-badge-brand-bg: var(--color-brand-800);
+    --color-badge-brand-fg: var(--color-brand-100);
+
+    --ring-color: var(--color-brand-300);
+  }
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-surface-raised: var(--color-surface-raised);
+  --color-border: var(--color-border);
+  --color-fg: var(--color-fg);
+  --color-fg-muted: var(--color-fg-muted);
+  --color-fg-subtle: var(--color-fg-subtle);
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-primary-fg: var(--color-primary-fg);
+  --color-danger: var(--color-danger);
+  --color-danger-bg: var(--color-danger-bg);
+  --color-warning: var(--color-warning);
+  --color-warning-bg: var(--color-warning-bg);
+  --color-success: var(--color-success);
+  --color-success-bg: var(--color-success-bg);
+  --color-info: var(--color-info);
+  --color-info-bg: var(--color-info-bg);
+  --color-badge-brand-bg: var(--color-badge-brand-bg);
+  --color-badge-brand-fg: var(--color-badge-brand-fg);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+}
+
+/* Respect prefers-reduced-motion globally, plus a manual override the user
+   can set in Settings (adds .reduce-motion to <html>). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html.reduce-motion *,
+html.reduce-motion *::before,
+html.reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Visible, consistent focus ring for keyboard users on every interactive
+   element — this is the accessibility backbone the spec calls for. */
+:focus-visible {
+  outline: 2px solid var(--ring-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background-color: var(--color-brand-200);
+  color: var(--color-brand-900);
+}

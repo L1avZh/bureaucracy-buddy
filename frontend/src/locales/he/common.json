@@ -1,0 +1,380 @@
+{
+  "app": {
+    "name": "החבר הבירוקרטי"
+  },
+  "a11y": {
+    "skipToContent": "דלג לתוכן הראשי"
+  },
+  "nav": {
+    "dashboard": "לוח בקרה",
+    "processes": "תהליכים",
+    "documents": "מסמכים",
+    "settings": "הגדרות",
+    "account": "חשבון",
+    "primary": "ניווט ראשי",
+    "toggleMenu": "פתיחת תפריט"
+  },
+  "common": {
+    "cancel": "ביטול",
+    "create": "יצירה",
+    "add": "הוספה",
+    "remove": "הסרה",
+    "delete": "מחיקה",
+    "edit": "עריכה",
+    "saveChanges": "שמירת שינויים",
+    "retry": "ניסיון חוזר",
+    "back": "חזרה",
+    "dismiss": "התעלמות",
+    "send": "שליחה"
+  },
+  "errors": {
+    "loadFailed": "משהו השתבש",
+    "genericMessage": "לא הצלחנו לטעון את זה. נסו שוב."
+  },
+  "offline": {
+    "banner": "אין חיבור לרשת. מוצגים הנתונים האחרונים שנשמרו — לשינויים יידרש חיבור."
+  },
+  "auth": {
+    "loginTitle": "ברוכים השבים",
+    "loginDescription": "התחברו כדי לעקוב אחר התהליכים שלכם.",
+    "email": "אימייל",
+    "password": "סיסמה",
+    "passwordHint": "לפחות 10 תווים.",
+    "logIn": "התחברות",
+    "logout": "התנתקות",
+    "noAccount": "אין לכם חשבון?",
+    "register": "הרשמה",
+    "registerTitle": "יצירת חשבון",
+    "registerDescription": "החבר הבירוקרטי שומר את כל התהליכים, המסמכים והתאריכים שלכם במקום אחד.",
+    "displayName": "שם תצוגה",
+    "createAccount": "יצירת חשבון",
+    "haveAccount": "כבר יש לכם חשבון?",
+    "errors": {
+      "invalidEmail": "הזינו כתובת אימייל תקינה.",
+      "passwordTooShort": "הסיסמה צריכה לכלול לפחות 10 תווים.",
+      "passwordRequired": "הזינו סיסמה.",
+      "displayNameRequired": "הזינו שם."
+    }
+  },
+  "onboarding": {
+    "title": "מה תרצו להספיק?",
+    "subtitle": "ספרו לנו מה המטרה שלכם ונציע רשימת משימות ראשונית.",
+    "goalLabel": "תארו מה עליכם לעשות",
+    "goalPlaceholder": "לדוגמה: לחדש את הדרכון לפני שיפוג",
+    "categoryPrompt": "בחרו את הקטגוריה המתאימה ביותר (אופציונלי)",
+    "generate": "הצעת רשימת משימות",
+    "skip": "דלגו, אני אסדר את זה בעצמי",
+    "createProcess": "יצירת התהליך הזה",
+    "processCreated": "התהליך שלכם מוכן."
+  },
+  "dashboard": {
+    "title": "לוח בקרה",
+    "subtitle": "הנה מה שדורש את תשומת לבכם.",
+    "viewAll": "צפייה בכל התהליכים",
+    "activeProcesses": "תהליכים פעילים",
+    "noActiveProcessesTitle": "אין עדיין תהליכים פעילים",
+    "noActiveProcessesDescription": "הוסיפו את התהליך הראשון שלכם כדי להתחיל לעקוב אחר משימות ותאריכים.",
+    "nextStep": "הצעד הבא",
+    "upcomingDeadlines": "תאריכים קרובים",
+    "noUpcomingDeadlines": "אין תאריכים קרובים.",
+    "needsAttention": "דורש תשומת לב",
+    "nothingNeedsAttention": "שום דבר דחוף כרגע.",
+    "recentlyCompleted": "משימות שהושלמו לאחרונה",
+    "nothingCompletedYet": "עדיין לא הושלם דבר.",
+    "completedProcesses": "תהליכים שהושלמו",
+    "noCompletedProcesses": "אין עדיין תהליכים שהושלמו."
+  },
+  "processes": {
+    "newProcess": "תהליך חדש",
+    "backToList": "חזרה לתהליכים",
+    "checklist": "רשימת משימות",
+    "deadline": "תאריך יעד",
+    "emptyTitle": "אין עדיין תהליכים",
+    "emptyDescription": "הוסיפו את התהליך הראשון שלכם — דוח מס, חידוש מסמך, כל דבר בירוקרטי — ואנחנו נעזור לכם לעקוב אחריו.",
+    "noResultsTitle": "לא נמצאו תהליכים מתאימים",
+    "noResultsDescription": "נסו מונח חיפוש או סינון אחר.",
+    "searchPlaceholder": "חיפוש תהליכים…",
+    "allStatuses": "כל הסטטוסים",
+    "allCategories": "כל הקטגוריות",
+    "filterStatus": "סינון לפי סטטוס",
+    "filterCategory": "סינון לפי קטגוריה",
+    "createSuccess": "התהליך נוצר.",
+    "createError": "יצירת התהליך נכשלה.",
+    "updateError": "שמירת השינוי נכשלה.",
+    "deleteSuccess": "התהליך נמחק.",
+    "deleteError": "מחיקת התהליך נכשלה.",
+    "deleteConfirmTitle": "למחוק את התהליך הזה?",
+    "deleteConfirmDescription": "פעולה זו תמחק לצמיתות את \"{{title}}\" ואת המשימות שלו. לא ניתן לבטל פעולה זו.",
+    "notFoundTitle": "התהליך לא נמצא",
+    "notFoundDescription": "ייתכן שהוא נמחק, או שהקישור שגוי.",
+    "noTasksTitle": "אין עדיין משימות",
+    "noTasksDescription": "הוסיפו את המשימה הראשונה כדי להתחיל את רשימת המשימות.",
+    "noTasksYet": "אין עדיין משימות.",
+    "tasksComplete": "{{done}} מתוך {{total}} משימות הושלמו",
+    "form": {
+      "title": "כותרת",
+      "category": "קטגוריה",
+      "priority": "עדיפות",
+      "status": "סטטוס",
+      "deadline": "תאריך יעד",
+      "deadlineHint": "אופציונלי — תמיד אפשר להוסיף זאת מאוחר יותר.",
+      "description": "תיאור"
+    },
+    "category": {
+      "government": "ממשלה",
+      "tax": "מיסים",
+      "healthcare": "בריאות",
+      "employment": "תעסוקה",
+      "education": "חינוך",
+      "housing": "דיור",
+      "vehicles": "רכבים",
+      "banking": "בנקאות",
+      "immigration": "הגירה",
+      "other": "אחר"
+    },
+    "status": {
+      "not_started": "טרם התחיל",
+      "in_progress": "בתהליך",
+      "waiting": "ממתין",
+      "action_required": "נדרשת פעולה",
+      "completed": "הושלם",
+      "cancelled": "בוטל"
+    },
+    "priority": {
+      "low": "נמוכה",
+      "medium": "בינונית",
+      "high": "גבוהה"
+    },
+    "errors": {
+      "titleRequired": "הזינו כותרת."
+    }
+  },
+  "tasks": {
+    "newTask": "משימה חדשה",
+    "editTask": "עריכת משימה",
+    "createSuccess": "המשימה נוספה.",
+    "createError": "הוספת המשימה נכשלה.",
+    "updateSuccess": "המשימה עודכנה.",
+    "updateError": "עדכון המשימה נכשל.",
+    "deleteSuccess": "המשימה נמחקה.",
+    "deleteError": "מחיקת המשימה נכשלה.",
+    "deleteConfirmTitle": "למחוק את המשימה הזו?",
+    "deleteConfirmDescription": "פעולה זו תמחק לצמיתות את \"{{title}}\". לא ניתן לבטל פעולה זו.",
+    "markComplete": "סימון כהושלם",
+    "markIncomplete": "סימון כלא הושלם",
+    "whatThisMeans": "מה זה אומר",
+    "hideDetails": "הסתרת פרטים",
+    "form": {
+      "title": "כותרת",
+      "explanation": "מה זה אומר",
+      "explanationHint": "הסבר בשפה פשוטה על השלב הזה.",
+      "deadline": "תאריך יעד",
+      "estimatedMinutes": "זמן משוער בדקות",
+      "externalLinks": "קישורים",
+      "linkLabel": "תווית",
+      "linkUrl": "כתובת",
+      "notes": "הערות"
+    },
+    "status": {
+      "skipped": "דולג"
+    },
+    "errors": {
+      "titleRequired": "הזינו כותרת.",
+      "estimatedMinutesInvalid": "הזינו מספר שלם חיובי, או השאירו שדה זה ריק."
+    }
+  },
+  "documents": {
+    "upload": "העלאת מסמך",
+    "uploadTitle": "העלאת מסמך",
+    "uploadSuccess": "המסמך הועלה.",
+    "uploadError": "העלאת המסמך נכשלה.",
+    "deleteSuccess": "המסמך נמחק.",
+    "deleteError": "מחיקת המסמך נכשלה.",
+    "deleteConfirmTitle": "למחוק את המסמך הזה?",
+    "deleteConfirmDescription": "פעולה זו תמחק לצמיתות את \"{{title}}\". לא ניתן לבטל פעולה זו.",
+    "download": "הורדה",
+    "expires": "פג תוקף",
+    "expired": "פג תוקף",
+    "searchPlaceholder": "חיפוש מסמכים…",
+    "allProcesses": "כל התהליכים",
+    "emptyTitle": "אין עדיין מסמכים",
+    "emptyDescription": "העלו תעודות, טפסים או אישורים כדי שיהיה קל למצוא אותם מאוחר יותר.",
+    "noResultsTitle": "לא נמצאו מסמכים מתאימים",
+    "noResultsDescription": "נסו מונח חיפוש או סינון אחר.",
+    "form": {
+      "file": "קובץ",
+      "chooseFile": "בחירת קובץ",
+      "acceptedTypes": "PDF,‏ PNG,‏ JPG,‏ WEBP או HEIC, עד 10 מ״ב.",
+      "title": "כותרת",
+      "category": "קטגוריה",
+      "process": "תהליך",
+      "processHint": "אפשר לקשר את המסמך לתהליך (אופציונלי).",
+      "noProcess": "ללא תהליך",
+      "expiresAt": "תאריך תפוגה",
+      "notes": "הערות"
+    },
+    "errors": {
+      "titleRequired": "הזינו כותרת.",
+      "categoryRequired": "בחרו קטגוריה.",
+      "fileRequired": "בחרו קובץ להעלאה.",
+      "unsupportedType": "סוג הקובץ אינו נתמך. השתמשו ב-PDF,‏ PNG,‏ JPG,‏ WEBP או HEIC.",
+      "tooLarge": "הקובץ גדול מדי. הגבלת הגודל היא {{max}}."
+    }
+  },
+  "notes": {
+    "title": "הערות",
+    "add": "הוספת הערה",
+    "addPlaceholder": "הוספת הערה…",
+    "createError": "הוספת ההערה נכשלה.",
+    "updateError": "עדכון ההערה נכשל.",
+    "errors": {
+      "bodyRequired": "הזינו הערה."
+    }
+  },
+  "reminders": {
+    "errors": {
+      "titleRequired": "הזינו כותרת."
+    }
+  },
+  "sources": {
+    "errors": {
+      "titleRequired": "הזינו כותרת.",
+      "invalidUrl": "הזינו כתובת URL תקינה.",
+      "organizationRequired": "הזינו את שם הארגון.",
+      "categoryRequired": "בחרו קטגוריה."
+    }
+  },
+  "search": {
+    "groups": {
+      "processes": "תהליכים",
+      "tasks": "משימות",
+      "documents": "מסמכים",
+      "notes": "הערות",
+      "sources": "מקורות"
+    }
+  },
+  "commandPalette": {
+    "label": "פאלטת פקודות",
+    "open": "פתיחת פאלטת פקודות",
+    "searchButton": "חיפוש",
+    "shortcut": "⌘K",
+    "placeholder": "חיפוש תהליכים, משימות, מסמכים…",
+    "searching": "מחפש…",
+    "noResults": "לא נמצאו תוצאות.",
+    "actions": "פעולות",
+    "newProcess": "תהליך חדש",
+    "newTask": "משימה חדשה",
+    "openSettings": "פתיחת הגדרות",
+    "toggleTheme": "החלפת ערכת נושא",
+    "exportData": "ייצוא נתונים",
+    "showDeadlines": "הצגת תאריכי יעד"
+  },
+  "ai": {
+    "assistantTitle": "עוזר בינה מלאכותית",
+    "assistantDescription": "קבלו עזרה בהבנה ותכנון של התהליך הזה.",
+    "quickActions": {
+      "explain": "הסבירו את זה",
+      "whatsNext": "מה הלאה?",
+      "createChecklist": "יצירת רשימת משימות",
+      "summarize": "סיכום",
+      "findMissingInfo": "איתור מידע חסר",
+      "prepareQuestions": "הכנת שאלות"
+    },
+    "quickActionPrompts": {
+      "explain": "הסבירו מה כרוך ב-\"{{title}}\" ומדוע זה חשוב.",
+      "whatsNext": "בהתבסס על \"{{title}}\", מה עליי לעשות הלאה?",
+      "summarize": "סכמו את המצב הנוכחי של \"{{title}}\".",
+      "findMissingInfo": "אילו פרטים עשויים להיות חסרים ב-\"{{title}}\"?",
+      "prepareQuestions": "הכינו שאלות שכדאי לי לשאול לגבי \"{{title}}\"."
+    },
+    "inputPlaceholder": "שאלו שאלת המשך…",
+    "disclaimerTitle": "הנחיה שנוצרה על ידי בינה מלאכותית",
+    "notVerified": "הנחיה שנוצרה על ידי בינה מלאכותית, לא מידע רשמי מאומת.",
+    "officialSourcesTitle": "מקורות רשמיים להשוואה",
+    "providerLabel": "ספק: {{provider}}",
+    "confidence": {
+      "ai_generated": "נוצר על ידי בינה מלאכותית"
+    },
+    "addTasksToProcess": "הוספת משימות לתהליך",
+    "checklistAdded": "נוספו {{count}} משימות.",
+    "errors": {
+      "requestFailed": "העוזר לא הצליח להגיב. נסו שוב.",
+      "goalRequired": "תארו מה אתם מנסים לעשות."
+    }
+  },
+  "settings": {
+    "tabs": {
+      "general": "כללי",
+      "appearance": "מראה",
+      "notifications": "התראות",
+      "privacy": "פרטיות",
+      "ai": "בינה מלאכותית",
+      "data": "נתונים",
+      "about": "אודות"
+    },
+    "general": {
+      "title": "כללי",
+      "description": "פרטי החשבון שלכם.",
+      "email": "אימייל",
+      "displayName": "שם תצוגה",
+      "language": "שפה",
+      "saveSuccess": "נשמר.",
+      "saveError": "שמירת השינויים נכשלה.",
+      "replayOnboarding": "הצגת ההיכרות מחדש",
+      "errors": {
+        "nameRequired": "הזינו שם."
+      }
+    },
+    "appearance": {
+      "title": "מראה",
+      "description": "בחרו כיצד ייראה החבר הבירוקרטי.",
+      "theme": "ערכת נושא",
+      "themeOptions": {
+        "light": "בהיר",
+        "dark": "כהה",
+        "system": "לפי המערכת"
+      },
+      "reducedMotion": "צמצום תנועה ואנימציות"
+    },
+    "notifications": {
+      "title": "התראות",
+      "description": "ברירות מחדל לתזכורות עבור פריטים חדשים.",
+      "localOnlyNote": "העדפות התזכורות נשמרות במכשיר זה בלבד — החוזה מול השרת עדיין לא כולל הגדרות התראה ברמת החשבון."
+    },
+    "privacy": {
+      "title": "פרטיות",
+      "documentsNote": "מסמכים שאתם מעלים נשמרים במופע השרת הפרטי שלכם, בתיקייה פרטית וייעודית לכם. הם אינם נשלחים לשום מקום אחר.",
+      "aiNote": "בקשות לבינה מלאכותית נשלחות רק לספק שהוגדר בשרת שלכם (מדומה או OpenAI). הספק המדומה אינו שולח את הנתונים שלכם לשום מקום.",
+      "accountNote": "נתוני החשבון שלכם משויכים אך ורק אליכם — אף משתמש אחר אינו יכול לקרוא או לשנות אותם."
+    },
+    "ai": {
+      "title": "בינה מלאכותית",
+      "providerNote": "ספק הבינה המלאכותית הפעיל נקבע על ידי תצורת השרת שלכם ומוצג לצד כל תגובה.",
+      "mockLabel": "מדומה",
+      "mockDescription": "הספק המדומה מייצר הצעות שמרניות מבוססות תבנית ישירות בשרת, ואינו פונה לשירות בינה מלאכותית חיצוני.",
+      "disclaimerNote": "כל תגובת בינה מלאכותית מסומנת עם הספק שלה ועם הבהרה — זו הנחיה, לא מידע רשמי מאומת."
+    },
+    "data": {
+      "title": "נתונים",
+      "description": "ייצוא או ייבוא של הנתונים שלכם.",
+      "exportJson": "ייצוא נתונים (JSON)",
+      "exportZip": "ייצוא מסמכים (ZIP)",
+      "importTitle": "ייבוא נתונים",
+      "importWarning": "ייבוא יוסיף נתונים מהקובץ הזה לחשבון שלכם. פריטים קיימים עם מזהים תואמים עלולים להידרס. ייבאו רק קובץ שאתם סומכים עליו.",
+      "importConfirm": "אני מבין/ה שפעולה זו עלולה לדרוס נתונים קיימים.",
+      "importAction": "ייבוא",
+      "importSuccess": "הנתונים יובאו.",
+      "importError": "ייבוא הקובץ נכשל.",
+      "importInvalidFile": "הקובץ הזה לא נראה כקובץ ייצוא תקין."
+    },
+    "about": {
+      "description": "עוזר אישי לתהליכים בירוקרטיים.",
+      "version": "גרסה {{version}}"
+    }
+  },
+  "notFound": {
+    "title": "העמוד לא נמצא",
+    "description": "העמוד שחיפשתם אינו קיים או שהוזז.",
+    "backHome": "חזרה ללוח הבקרה"
+  }
+}
