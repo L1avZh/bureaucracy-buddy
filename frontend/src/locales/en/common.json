@@ -1,0 +1,380 @@
+{
+  "app": {
+    "name": "Bureaucracy Buddy"
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "processes": "Processes",
+    "documents": "Documents",
+    "settings": "Settings",
+    "account": "Account",
+    "primary": "Primary",
+    "toggleMenu": "Toggle menu"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "create": "Create",
+    "add": "Add",
+    "remove": "Remove",
+    "delete": "Delete",
+    "edit": "Edit",
+    "saveChanges": "Save changes",
+    "retry": "Retry",
+    "back": "Back",
+    "dismiss": "Dismiss",
+    "send": "Send"
+  },
+  "errors": {
+    "loadFailed": "Something went wrong",
+    "genericMessage": "We couldn't load this. Please try again."
+  },
+  "offline": {
+    "banner": "You're offline. Showing the latest saved data — changes will need a connection."
+  },
+  "auth": {
+    "loginTitle": "Welcome back",
+    "loginDescription": "Sign in to keep track of your processes.",
+    "email": "Email",
+    "password": "Password",
+    "passwordHint": "At least 10 characters.",
+    "logIn": "Log in",
+    "logout": "Log out",
+    "noAccount": "Don't have an account?",
+    "register": "Sign up",
+    "registerTitle": "Create your account",
+    "registerDescription": "Bureaucracy Buddy keeps every process, document, and deadline in one place.",
+    "displayName": "Display name",
+    "createAccount": "Create account",
+    "haveAccount": "Already have an account?",
+    "errors": {
+      "invalidEmail": "Enter a valid email address.",
+      "passwordTooShort": "Password must be at least 10 characters.",
+      "passwordRequired": "Enter your password.",
+      "displayNameRequired": "Enter your name."
+    }
+  },
+  "onboarding": {
+    "title": "What are you trying to get done?",
+    "subtitle": "Tell us your goal and we'll suggest a starter checklist.",
+    "goalLabel": "Describe what you need to do",
+    "goalPlaceholder": "e.g. Renew my passport before it expires",
+    "categoryPrompt": "Pick the closest category (optional)",
+    "generate": "Suggest a checklist",
+    "skip": "Skip, I'll set things up myself",
+    "createProcess": "Create this process",
+    "processCreated": "Your process is ready."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Here's what needs your attention.",
+    "viewAll": "View all processes",
+    "activeProcesses": "Active processes",
+    "noActiveProcessesTitle": "No active processes yet",
+    "noActiveProcessesDescription": "Add your first process to start tracking tasks and deadlines.",
+    "nextStep": "Next step",
+    "upcomingDeadlines": "Upcoming deadlines",
+    "noUpcomingDeadlines": "No upcoming deadlines.",
+    "needsAttention": "Needs attention",
+    "nothingNeedsAttention": "Nothing urgent right now.",
+    "recentlyCompleted": "Recently completed tasks",
+    "nothingCompletedYet": "Nothing completed yet.",
+    "completedProcesses": "Completed processes",
+    "noCompletedProcesses": "No completed processes yet."
+  },
+  "processes": {
+    "newProcess": "New process",
+    "backToList": "Back to processes",
+    "checklist": "Checklist",
+    "deadline": "Deadline",
+    "emptyTitle": "No processes yet",
+    "emptyDescription": "Add your first process — a tax filing, a renewal, anything bureaucratic — and we'll help you track it.",
+    "noResultsTitle": "No matching processes",
+    "noResultsDescription": "Try a different search term or filter.",
+    "searchPlaceholder": "Search processes…",
+    "allStatuses": "All statuses",
+    "allCategories": "All categories",
+    "filterStatus": "Filter by status",
+    "filterCategory": "Filter by category",
+    "createSuccess": "Process created.",
+    "createError": "Couldn't create the process.",
+    "updateError": "Couldn't save that change.",
+    "deleteSuccess": "Process deleted.",
+    "deleteError": "Couldn't delete the process.",
+    "deleteConfirmTitle": "Delete this process?",
+    "deleteConfirmDescription": "This permanently deletes \"{{title}}\" and its tasks. This can't be undone.",
+    "notFoundTitle": "Process not found",
+    "notFoundDescription": "It may have been deleted, or the link is incorrect.",
+    "noTasksTitle": "No tasks yet",
+    "noTasksDescription": "Add the first task to start this checklist.",
+    "noTasksYet": "No tasks yet.",
+    "tasksComplete": "{{done}} of {{total}} tasks complete",
+    "form": {
+      "title": "Title",
+      "category": "Category",
+      "priority": "Priority",
+      "status": "Status",
+      "deadline": "Deadline",
+      "deadlineHint": "Optional — you can always add this later.",
+      "description": "Description"
+    },
+    "category": {
+      "government": "Government",
+      "tax": "Tax",
+      "healthcare": "Healthcare",
+      "employment": "Employment",
+      "education": "Education",
+      "housing": "Housing",
+      "vehicles": "Vehicles",
+      "banking": "Banking",
+      "immigration": "Immigration",
+      "other": "Other"
+    },
+    "status": {
+      "not_started": "Not started",
+      "in_progress": "In progress",
+      "waiting": "Waiting",
+      "action_required": "Action required",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "priority": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
+    },
+    "errors": {
+      "titleRequired": "Enter a title."
+    }
+  },
+  "tasks": {
+    "newTask": "New task",
+    "editTask": "Edit task",
+    "createSuccess": "Task added.",
+    "createError": "Couldn't add the task.",
+    "updateSuccess": "Task updated.",
+    "updateError": "Couldn't update the task.",
+    "deleteSuccess": "Task deleted.",
+    "deleteError": "Couldn't delete the task.",
+    "deleteConfirmTitle": "Delete this task?",
+    "deleteConfirmDescription": "This permanently deletes \"{{title}}\". This can't be undone.",
+    "markComplete": "Mark as complete",
+    "markIncomplete": "Mark as incomplete",
+    "whatThisMeans": "What this means",
+    "hideDetails": "Hide details",
+    "form": {
+      "title": "Title",
+      "explanation": "What this means",
+      "explanationHint": "A plain-language explanation of this step.",
+      "deadline": "Deadline",
+      "estimatedMinutes": "Estimated minutes",
+      "externalLinks": "Links",
+      "linkLabel": "Label",
+      "linkUrl": "URL",
+      "notes": "Notes"
+    },
+    "status": {
+      "skipped": "Skipped"
+    },
+    "errors": {
+      "titleRequired": "Enter a title.",
+      "estimatedMinutesInvalid": "Enter a positive whole number, or leave this blank."
+    }
+  },
+  "documents": {
+    "upload": "Upload document",
+    "uploadTitle": "Upload a document",
+    "uploadSuccess": "Document uploaded.",
+    "uploadError": "Couldn't upload the document.",
+    "deleteSuccess": "Document deleted.",
+    "deleteError": "Couldn't delete the document.",
+    "deleteConfirmTitle": "Delete this document?",
+    "deleteConfirmDescription": "This permanently deletes \"{{title}}\". This can't be undone.",
+    "download": "Download",
+    "expires": "Expires",
+    "expired": "Expired",
+    "searchPlaceholder": "Search documents…",
+    "allProcesses": "All processes",
+    "emptyTitle": "No documents yet",
+    "emptyDescription": "Upload IDs, forms, or confirmations so they're easy to find later.",
+    "noResultsTitle": "No matching documents",
+    "noResultsDescription": "Try a different search term or filter.",
+    "form": {
+      "file": "File",
+      "chooseFile": "Choose a file",
+      "acceptedTypes": "PDF, PNG, JPG, WEBP, or HEIC, up to 10 MB.",
+      "title": "Title",
+      "category": "Category",
+      "process": "Process",
+      "processHint": "Optionally link this document to a process.",
+      "noProcess": "No process",
+      "expiresAt": "Expiration date",
+      "notes": "Notes"
+    },
+    "errors": {
+      "titleRequired": "Enter a title.",
+      "categoryRequired": "Choose a category.",
+      "fileRequired": "Choose a file to upload.",
+      "unsupportedType": "That file type isn't supported. Use PDF, PNG, JPG, WEBP, or HEIC.",
+      "tooLarge": "That file is too large. The limit is {{max}}."
+    }
+  },
+  "notes": {
+    "title": "Notes",
+    "add": "Add note",
+    "addPlaceholder": "Add a note…",
+    "createError": "Couldn't add the note.",
+    "updateError": "Couldn't update the note.",
+    "errors": {
+      "bodyRequired": "Enter a note."
+    }
+  },
+  "reminders": {
+    "errors": {
+      "titleRequired": "Enter a title."
+    }
+  },
+  "sources": {
+    "errors": {
+      "titleRequired": "Enter a title.",
+      "invalidUrl": "Enter a valid URL.",
+      "organizationRequired": "Enter the organization.",
+      "categoryRequired": "Choose a category."
+    }
+  },
+  "search": {
+    "groups": {
+      "processes": "Processes",
+      "tasks": "Tasks",
+      "documents": "Documents",
+      "notes": "Notes",
+      "sources": "Sources"
+    }
+  },
+  "commandPalette": {
+    "label": "Command palette",
+    "open": "Open command palette",
+    "searchButton": "Search",
+    "shortcut": "⌘K",
+    "placeholder": "Search processes, tasks, documents…",
+    "searching": "Searching…",
+    "noResults": "No results found.",
+    "actions": "Actions",
+    "newProcess": "New process",
+    "newTask": "New task",
+    "openSettings": "Open settings",
+    "toggleTheme": "Toggle theme",
+    "exportData": "Export data",
+    "showDeadlines": "Show deadlines"
+  },
+  "ai": {
+    "assistantTitle": "AI assistant",
+    "assistantDescription": "Get help understanding and planning this process.",
+    "quickActions": {
+      "explain": "Explain this",
+      "whatsNext": "What's next?",
+      "createChecklist": "Create checklist",
+      "summarize": "Summarize",
+      "findMissingInfo": "Find missing information",
+      "prepareQuestions": "Prepare questions"
+    },
+    "quickActionPrompts": {
+      "explain": "Explain what \"{{title}}\" involves and why it matters.",
+      "whatsNext": "Based on \"{{title}}\", what should I do next?",
+      "summarize": "Summarize the current state of \"{{title}}\".",
+      "findMissingInfo": "What information might be missing from \"{{title}}\"?",
+      "prepareQuestions": "Prepare questions I should ask about \"{{title}}\"."
+    },
+    "inputPlaceholder": "Ask a follow-up question…",
+    "disclaimerTitle": "AI-generated guidance",
+    "notVerified": "AI-generated guidance, not verified official information.",
+    "officialSourcesTitle": "Official sources for comparison",
+    "providerLabel": "Provider: {{provider}}",
+    "confidence": {
+      "ai_generated": "AI-generated"
+    },
+    "addTasksToProcess": "Add tasks to process",
+    "checklistAdded": "Added {{count}} tasks.",
+    "errors": {
+      "requestFailed": "The assistant couldn't respond. Please try again.",
+      "goalRequired": "Describe what you're trying to do."
+    }
+  },
+  "settings": {
+    "tabs": {
+      "general": "General",
+      "appearance": "Appearance",
+      "notifications": "Notifications",
+      "privacy": "Privacy",
+      "ai": "AI",
+      "data": "Data",
+      "about": "About"
+    },
+    "general": {
+      "title": "General",
+      "description": "Your account details.",
+      "email": "Email",
+      "displayName": "Display name",
+      "language": "Language",
+      "saveSuccess": "Saved.",
+      "saveError": "Couldn't save your changes.",
+      "replayOnboarding": "Show onboarding again",
+      "errors": {
+        "nameRequired": "Enter your name."
+      }
+    },
+    "appearance": {
+      "title": "Appearance",
+      "description": "Choose how Bureaucracy Buddy looks.",
+      "theme": "Theme",
+      "themeOptions": {
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+      },
+      "reducedMotion": "Reduce motion and animations"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "description": "Reminder defaults for new items.",
+      "localOnlyNote": "Reminder preferences are stored on this device only — the backend contract doesn't yet expose account-wide notification settings."
+    },
+    "privacy": {
+      "title": "Privacy",
+      "documentsNote": "Documents you upload are stored on your own backend instance, in a private, per-user folder. They are never sent anywhere else.",
+      "aiNote": "AI requests are sent only to the AI provider configured on your backend (mock or OpenAI). The mock provider never sends your data anywhere.",
+      "accountNote": "Your account data is scoped strictly to you — no other user can read or modify it."
+    },
+    "ai": {
+      "title": "AI",
+      "providerNote": "The active AI provider is controlled by your backend's configuration and is shown next to every AI response.",
+      "mockLabel": "Mock",
+      "mockDescription": "The mock provider generates conservative, template-based suggestions locally on the backend and never contacts an external AI service.",
+      "disclaimerNote": "Every AI response is labeled with its provider and a disclaimer — it's guidance, not verified official information."
+    },
+    "data": {
+      "title": "Data",
+      "description": "Export or import your data.",
+      "exportJson": "Export data (JSON)",
+      "exportZip": "Export documents (ZIP)",
+      "importTitle": "Import data",
+      "importWarning": "Importing will add data from this file to your account. Existing items with matching IDs may be overwritten. Only import a file you trust.",
+      "importConfirm": "I understand this may overwrite existing data.",
+      "importAction": "Import",
+      "importSuccess": "Data imported.",
+      "importError": "Couldn't import that file.",
+      "importInvalidFile": "That file doesn't look like a valid export."
+    },
+    "about": {
+      "description": "A personal assistant for bureaucratic processes.",
+      "version": "Version {{version}}"
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or may have moved.",
+    "backHome": "Back to dashboard"
+  }
+}
