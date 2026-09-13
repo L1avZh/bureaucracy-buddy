@@ -1,5 +1,7 @@
-# docker-compose.yml (project root)
-version: "3.9"
+# Builds and runs the full stack (Postgres + backend + frontend) as it would
+# run in production. For active development with hot-reload, run the backend
+# (uvicorn --reload) and frontend (npm run dev) directly instead — see
+# README.md "Development".
 services:
   db:
     image: postgres:16-alpine
@@ -9,29 +11,42 @@ services:
       POSTGRES_PASSWORD: buddy
     volumes: [db_data:/var/lib/postgresql/data]
     ports: ["5432:5432"]
-
-  redis:
-    image: redis:7-alpine
-    ports: ["6379:6379"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U buddy -d buddy"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
 
   backend:
     build: ./backend
-    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-    volumes: [./backend:/app]
-    env_file: [.env]
-    depends_on: [db, redis]
+    environment:
+      ENVIRONMENT: production
+      SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in your .env file — see .env.example}
+      DATABASE_URL: postgresql+asyncpg://buddy:buddy@db:5432/buddy
+      CORS_ORIGINS: http://localhost:8080
+      AI_PROVIDER: ${AI_PROVIDER:-mock}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+    volumes:
+      - backend_storage:/app/storage
+    depends_on:
+      db:
+        condition: service_healthy
     ports: ["8000:8000"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
 
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    volumes:
-      - ./frontend:/app
-      - /app/node_modules
-    command: npm run dev -- --host
-    ports: ["5173:5173"]
-    depends_on: [backend]
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports: ["8080:8080"]
 
 volumes:
   db_data:
+  backend_storage:
