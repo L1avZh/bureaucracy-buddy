@@ -29,7 +29,18 @@ jobs:
       - run: npm run test
       - run: npm run build
       - name: Dependency audit (high/critical only)
-        run: npm audit --audit-level=high
+        # Surface each finding as an annotation so it is visible on the run
+        # summary without opening the raw log; the step's exit code is
+        # npm audit's own.
+        run: |
+          set +e
+          npm audit --json --audit-level=high > npm-audit.json
+          rc=$?
+          set -e
+          jq -r '(.vulnerabilities // {}) | to_entries[]
+            | select(.value.severity == "high" or .value.severity == "critical")
+            | "::error title=npm audit::\(.key) (\(.value.severity)) affected \(.value.range); fix available: \(.value.fixAvailable | tostring)"' npm-audit.json
+          exit $rc
 
   backend:
     name: Backend (test, security)
@@ -47,9 +58,19 @@ jobs:
       - run: pip install -r requirements-dev.txt
       - run: pytest -q
       - name: Dependency audit
+        # Surface each finding as an annotation (see the frontend job); the
+        # step's exit code is pip-audit's own.
         run: |
           pip install pip-audit
-          pip-audit -r requirements.txt
+          set +e
+          pip-audit -r requirements.txt -f json -o pip-audit.json
+          rc=$?
+          set -e
+          if [ -s pip-audit.json ]; then
+            jq -r '.dependencies[] | select((.vulns // []) | length > 0) | . as $d | .vulns[]
+              | "::error title=pip-audit::\($d.name) \($d.version): \(.id), fixed in \(.fix_versions | join(", "))"' pip-audit.json
+          fi
+          exit $rc
 
   e2e:
     name: End-to-end (Playwright)
